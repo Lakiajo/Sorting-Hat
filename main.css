@@ -1,0 +1,29 @@
+body {
+    background-color: #643E60;
+}
+.jumbotron {
+    border: 2px solid #17334F;
+    background-color: #616E8D;
+    padding: 10px;
+    margin: 5px;
+}
+.display-4 {
+    text-align: center;
+    color: #251e3e;
+}
+.nameBox {
+    padding: 10px;
+    background-color: #616E8D;
+    border: 2px solid #17334F;
+    color: #251e3e; 
+}
+/* .text-light{
+    color: #251e3e; 
+} */
+.card {
+    width: 55px;
+    margin: 2px;
+}
+.card-body {
+    text-align: center;
+}
