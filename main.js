@@ -9,8 +9,8 @@ const houses = [
 ];
 
 const printToDom = (divId, textToPrint) => {
-    const selectDiv= document.getElementById(divId);
-    selectDiv.innerHTML =textToPrint;
+    const selectDiv = document.getElementById(divId);
+    selectDiv.innerHTML = textToPrint;
 }
 
 const expelledStudents = [];
@@ -78,5 +78,5 @@ const eventListener = () => {
 const init = () => {
     hideInputForm();
     eventListener();
-}
+};
 init();
