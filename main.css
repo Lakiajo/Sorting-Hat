@@ -21,9 +21,19 @@ body {
     color: #251e3e; 
 } */
 .card {
-    width: 55px;
-    margin: 2px;
+    width: 60px;
+    margin: 5px;
+    align-content: center;
+    background-color: #616E8D;
+    border: 2px solid #17334F;
+    color: #251e3e;
 }
 .card-body {
     text-align: center;
 }
+#sortedStudents {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+

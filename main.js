@@ -11,7 +11,7 @@ const houses = [
 const printToDom = (divId, textToPrint) => {
     const selectDiv = document.getElementById(divId);
     selectDiv.innerHTML = textToPrint;
-}
+};
 
 const expelledStudents = [];
 let studentCounter = 1;
@@ -28,7 +28,7 @@ const addDeleteEvents = () => {
     const deleteButtons = document.getElementsByClassName('deleteButton');
     for(let l=0; l<deleteButtons.length; l++){
         deleteButtons[l].addEventListener('click',deleteFunction);
-    }
+    };
 };
 const domStringBuilder = (arrayToPrint) => {
     let domString = '';
@@ -42,7 +42,7 @@ const domStringBuilder = (arrayToPrint) => {
         domString += `</div>`;
     });
    printToDom('sortedStudents',domString);
-}
+};
 
 const addStudent = (e) => {
     e.preventDefault();
@@ -50,6 +50,7 @@ const addStudent = (e) => {
    const newName = {
        name: inputName,
        id:`student${studentCounter}`,
+       house: houses[randomHouse()],
    };
    students.push(newName);
    studentCounter++;
@@ -66,8 +67,13 @@ const deleteFunction = (e) => {
         if (student.id===buttonId){
             students.splice(index,1)
         }
-    })
+    });
     domStringBuilder(students);
+};
+const randomHouse = () => {
+    const randomNumber = Math.floor(Math.random()*4)
+    console.log(randomNumber);
+    return randomNumber
 };
 
 const eventListener = () => {
@@ -78,5 +84,6 @@ const eventListener = () => {
 const init = () => {
     hideInputForm();
     eventListener();
+    randomHouse();
 };
 init();
